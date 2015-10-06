@@ -14,6 +14,8 @@
 		s:0,
 		b:1
 		};
+		var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);
 	var video=['http://7xln5q.media1.z0.glb.clouddn.com/video/LostFrequenciesFeat.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
 	var support=['all'];
 	CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
