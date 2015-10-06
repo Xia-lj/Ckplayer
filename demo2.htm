@@ -6,20 +6,23 @@
 </head>
 <body>
 <div id="a1"></div>
-<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script>
 <script type="text/javascript">
-	var flashvars={
-		f:'http://7xln5q.media1.z0.glb.clouddn.com/video/LostFrequenciesFeat.mp4->video/mp4',
-		c:0,
-		s:0,
-		b:1
-		};
-		var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
-	CKobject.embedSWF('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);
-	var video=['http://7xln5q.media1.z0.glb.clouddn.com/video/LostFrequenciesFeat.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
-	var support=['all'];
-	CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
-	}
+    function loadedHandler(){
+        alert('加载已完成')
+    }
+    var flashvars={
+        f:'http://movie.ks.js.cn/flv/other/1_0.flv',
+        c:0,
+        h:1,
+        my_url:encodeURIComponent(window.location.href),
+        my_title:encodeURIComponent(document.title),
+        loaded:'loadedHandler',
+        b:0
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4'];
+    CKobject.embed('/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',false,flashvars,video,params);
 </script>
 </body>
 </html>
