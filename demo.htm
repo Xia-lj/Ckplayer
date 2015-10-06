@@ -22,17 +22,28 @@
 	CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
 	下面三行是调用html5播放器用到的
 	*/
-	var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
+	var video=['http://7xln5q.media1.z0.glb.clouddn.com/video/LostFrequenciesFeat.mp4->video/mp4','http://www.ckplayer.com/webm/0.webm->video/webm','http://www.ckplayer.com/webm/0.ogv->video/ogg'];
 	var support=['iPad','iPhone','ios','android+false','msie10+false'];
 	CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
 	
-	
+		
+	//开关灯
+	var box = new LightBox();
 	function closelights(){//关灯
-		alert(' 本演示不支持开关灯');
+		box.Show();
+		CKobject._K_('a1').style.width='940px';
+		CKobject._K_('a1').style.height='550px';
+		CKobject.getObjectById('ckplayer_a1').width=940;
+		CKobject.getObjectById('ckplayer_a1').height=550;
 	}
 	function openlights(){//开灯
-		alert(' 本演示不支持开关灯');
+		box.Close();
+		CKobject._K_('a1').style.width='600px';
+		CKobject._K_('a1').style.height='400px';
+		CKobject.getObjectById('ckplayer_a1').width=600;
+		CKobject.getObjectById('ckplayer_a1').height=400;
 	}
+
   </script>
 </body>
 </html>
