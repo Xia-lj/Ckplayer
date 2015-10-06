@@ -27,11 +27,21 @@
 	CKobject.embedHTML5('a1','ckplayer_a1',600,400,video,flashvars,support);
 	
 		
+	//开关灯
+	var box = new LightBox();
 	function closelights(){//关灯
-		alert(' 本演示不支持开关灯');
+		box.Show();
+		CKobject._K_('a1').style.width='940px';
+		CKobject._K_('a1').style.height='550px';
+		CKobject.getObjectById('ckplayer_a1').width=940;
+		CKobject.getObjectById('ckplayer_a1').height=550;
 	}
 	function openlights(){//开灯
-		alert(' 本演示不支持开关灯');
+		box.Close();
+		CKobject._K_('a1').style.width='600px';
+		CKobject._K_('a1').style.height='400px';
+		CKobject.getObjectById('ckplayer_a1').width=600;
+		CKobject.getObjectById('ckplayer_a1').height=400;
 	}
 
   </script>
